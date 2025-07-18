@@ -1,4 +1,4 @@
-package ru.tgbot.audiobot.config.feign.feign;
+package ru.tgbot.audiobot.config.feign;
 
 import feign.Client;
 import feign.RequestInterceptor;

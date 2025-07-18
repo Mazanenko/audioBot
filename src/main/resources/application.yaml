@@ -1,1 +1,16 @@
-spring.application.name=audioBot
+spring:
+  application:
+    name: audioBot
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+
+
+gigachat:
+  url: ${GIGACHAT_URL:https://gigachat.devices.sberbank.ru}
+  model: ${GIGACHAT_MODEL:GigaChat-2-Pro}
+  scope: ${GIGACHAT_SCOPE:GIGACHAT_API_PERS}
+  auth-url: ${GIGACHAT_AUTH_URL:https://ngw.devices.sberbank.ru:9443/api/v2/oauth}
+  auth-key: ${GIGACHAT_AUTH_KEY:}
+  audio-to-text-converter-enabled: ${GIGACHAT_AUDIO_TO_TEXT_ENABLED:true}

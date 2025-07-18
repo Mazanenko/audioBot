@@ -2,6 +2,6 @@ package ru.tgbot.audiobot.dto.gigachat;
 
 import java.util.Map;
 
-public record FunctionCall(String name,
-                           Map<String, Object> arguments) {
+public record FunctionCallDto(String name,
+                              Map<String, Object> arguments) {
 }
