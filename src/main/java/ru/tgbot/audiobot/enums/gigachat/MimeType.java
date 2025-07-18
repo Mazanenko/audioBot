@@ -29,7 +29,7 @@ public enum MimeType {
     MP4_AUDIO("audio/mp4"),
     MP3("audio/mpeg"),
     M4A("audio/x-m4a"),
-    WAV("audio/wav"),  // Основной тип (остальные варианты удалены)
+    WAV("audio/wav"),
     WEBA("audio/webm"),
     OGG_AUDIO("audio/ogg"),
     OPUS("audio/opus");

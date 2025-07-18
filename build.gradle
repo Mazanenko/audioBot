@@ -30,7 +30,7 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9")
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation("org.telegram:telegrambots-spring-boot-starter:6.9.7.1")
-    implementation("org.telegram:telegrambots-abilities:9.0.0")
+    implementation("org.telegram:telegrambotsextensions:6.9.7.1")
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
     compileOnly 'org.projectlombok:lombok'

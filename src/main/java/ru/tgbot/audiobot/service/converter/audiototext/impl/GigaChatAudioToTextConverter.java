@@ -2,8 +2,8 @@ package ru.tgbot.audiobot.service.converter.audiototext.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.unit.DataSize;
@@ -41,7 +41,7 @@ public class GigaChatAudioToTextConverter extends AbstractAudioToTextConverter {
     }
 
     @Override
-    public boolean isMatch(@NotNull MultipartFile file) {
+    public boolean isMatch(@NonNull MultipartFile file) {
         var fileSize = DataSize.ofBytes(file.getSize());
         final var maxFileSize = DataSize.ofMegabytes(properties.getUploadSize().getMaxAudioFileSize());
 
@@ -49,7 +49,7 @@ public class GigaChatAudioToTextConverter extends AbstractAudioToTextConverter {
     }
 
     @Override
-    public String convert(@NotNull MultipartFile file) {
+    public String convert(@NonNull MultipartFile file) {
         var fileUploadResponse = gigaChatFeignClient.uploadFile(FilePurpose.GENERAL.getValue(), file);
 
         if (!fileUploadResponse.getStatusCode().is2xxSuccessful() || fileUploadResponse.getBody() == null) {

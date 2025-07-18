@@ -12,5 +12,9 @@ gigachat:
   model: ${GIGACHAT_MODEL:GigaChat-2-Pro}
   scope: ${GIGACHAT_SCOPE:GIGACHAT_API_PERS}
   auth-url: ${GIGACHAT_AUTH_URL:https://ngw.devices.sberbank.ru:9443/api/v2/oauth}
-  auth-key: ${GIGACHAT_AUTH_KEY:}
+  auth-key: ${GIGACHAT_AUTH_KEY}
   audio-to-text-converter-enabled: ${GIGACHAT_AUDIO_TO_TEXT_ENABLED:true}
+
+telegram:
+  token: ${TELEGRAM_BOT_TOKEN}
+  bot-name: ${TELEGRAM_BOT_NAME}
